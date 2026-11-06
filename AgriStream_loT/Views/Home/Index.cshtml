@@ -1,0 +1,213 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid py-4">
+
+    <!-- Hero Section -->
+    <div class="p-5 mb-4 bg-primary text-white rounded-4 shadow">
+
+        <div class="container-fluid py-3">
+
+            <span class="text-uppercase fw-bold">
+                AgriStream IoT Management System
+            </span>
+
+            <h1 class="display-5 fw-bold mt-3">
+                Welcome to AgriStream IoT
+            </h1>
+
+            <p class="fs-5 mt-3">
+                Manage farmer information, usernames, passwords,
+                and assigned system roles using Microsoft Azure
+                cloud services from one central platform.
+            </p>
+
+            <a asp-controller="Farmers"
+               asp-action="Index"
+               class="btn btn-light btn-lg me-2">
+                View Farmers
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Dashboard Cards -->
+    <div class="row g-4">
+
+        <!-- Farmers -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center p-4">
+
+                    <div class="display-5 mb-3">👨‍🌾</div>
+
+                    <h4>Farmer Management</h4>
+
+                    <p class="text-muted">
+                        Register, view, update and manage
+                        farmer and agronomist information.
+                    </p>
+
+                    <a asp-controller="Farmers"
+                       asp-action="Index"
+                       class="btn btn-primary">
+                        Manage Farmers
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Queue -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center p-4">
+
+                    <div class="display-5 mb-3">⚙️</div>
+
+                    <h4>Queue Processing</h4>
+
+                    <p class="text-muted">
+                        Manage background messages, logs and
+                        inventory processing using Azure Queue Storage.
+                    </p>
+
+                    <a asp-controller="Queue"
+                       asp-action="Index"
+                       class="btn btn-primary">
+                        View Queues
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Logs -->
+        <div class="col-md-6 col-lg-4">
+
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center p-4">
+
+                    <div class="display-5 mb-3">📄</div>
+
+                    <h4>Application Logs</h4>
+
+                    <p class="text-muted">
+                        Access and download application log
+                        files stored in Azure Files.
+                    </p>
+
+                    <a asp-controller="Home"
+                       asp-action="DownloadLog"
+                       class="btn btn-primary">
+                        Download Log File
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Azure Services -->
+    <div class="mt-5">
+
+        <h2 class="mb-4 fw-bold">
+            Azure Cloud Services
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Table Storage -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+
+                        <div class="display-6 mb-3">🗄️</div>
+
+                        <h5>Azure Table Storage</h5>
+
+                        <p class="text-muted mb-0">
+                            Stores user information, usernames
+                            and assigned system roles.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blob Storage -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+
+                        <div class="display-6 mb-3">☁️</div>
+
+                        <h5>Azure Blob Storage</h5>
+
+                        <p class="text-muted mb-0">
+                            Stores images, documents and
+                            multimedia files.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Queue Storage -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+
+                        <div class="display-6 mb-3">📬</div>
+
+                        <h5>Azure Queue Storage</h5>
+
+                        <p class="text-muted mb-0">
+                            Handles background messages,
+                            logs and inventory processing.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Azure Files -->
+            <div class="col-md-6 col-lg-3">
+
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+
+                        <div class="display-6 mb-3">📁</div>
+
+                        <h5>Azure Files</h5>
+
+                        <p class="text-muted mb-0">
+                            Stores application logs and
+                            shared files in the cloud.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center mt-5 py-3 border-top">
+
+        <p class="text-muted mb-0">
+            AgriStream IoT Management System |
+            Powered by Microsoft Azure
+        </p>
+
+    </div>
+
+</div>
